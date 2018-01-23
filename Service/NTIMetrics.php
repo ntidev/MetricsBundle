@@ -73,6 +73,11 @@ class NTIMetrics implements Collector
         $this->statsDCollector->timing($variable, $time);
     }
 
+    public function gauge($variable, $value)
+    {
+        $this->statsDCollector->gauge($variable, $time);
+    }
+
     /**
      * Sends the metrics to the adapter backend.
      */
