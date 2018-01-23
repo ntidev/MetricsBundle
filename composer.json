@@ -1,0 +1,30 @@
+{
+    "name": "nti/metrics-bundle",
+    "description": "Send metrics to StatsD Server.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Héctor Ventura",
+            "email": "hventura@syneteksolutions.com"
+        }
+    ],
+    "keywords" : [
+        "MetricsBundle", "StatsD"
+    ],
+    "license" : [
+        "MIT"
+    ],
+    "autoload" : {
+        "psr-0" : {
+            "NTI\\MetricsBundle" : ""
+        }
+    },
+    "target-dir" : "NTI/MetricsBundle",
+    "minimum-stability": "dev",
+    "require": {},
+    "extra" : {
+        "branch-alias" : {
+            "dev-master" : "1.0-dev"
+        }
+    }
+}
