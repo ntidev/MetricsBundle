@@ -30,7 +30,7 @@ nti_metrics:
     host: "statsDserver" # default: localhost
     port: 8125         # default: 8125
     prefix: "greenlink"  # default: ""
-
+```
 
 ### Usage
 
@@ -43,6 +43,6 @@ $collector = $container->get('nti.metrics');
 The following methods are available for send metrics:
 
 ```
-$collector->increment('glbs.email.send');            # Same as send "glbs.email.send:1|c"
+$collector->increment('glbs.email.send');            # Same as send "glbs.email.send:1|c" 
 $collector->decrement('glbs.email.send');            # Same as send "glbs.email.send:-1|c"
 ```
