@@ -44,5 +44,6 @@ The following methods are available for send metrics:
 
 ```
 $collector->increment('glbs.email.send');            # Same as send "glbs.email.send:1|c"
+
 $collector->decrement('glbs.email.send');            # Same as send "glbs.email.send:-1|c"
 ```
