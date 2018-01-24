@@ -1,11 +1,20 @@
 
-# Created by https://www.gitignore.io/api/symfony,phpStorm
+# Created by https://www.gitignore.io/api/symfony,phpstorm,composer
+
+### Composer ###
+composer.phar
+/vendor/
+
+# Commit your application's lock file http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file
+# You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
+# composer.lock
 
 ### PhpStorm ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff:
+.idea/
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/dictionaries
@@ -92,7 +101,7 @@ fabric.properties
 /app/bootstrap.php.cache
 /var/bootstrap.php.cache
 /bin/*
-!bin/console
+!bin/send-metric
 !bin/symfony_requirements
 
 # Assets and user uploads
@@ -101,7 +110,7 @@ fabric.properties
 
 # PHPUnit
 /app/phpunit.xml
-/phpunit.xml
+#/phpunit.xml
 
 # Build data
 /build/
@@ -114,4 +123,4 @@ fabric.properties
 /web/js/
 
 
-# End of https://www.gitignore.io/api/symfony,phpStorm
+# End of https://www.gitignore.io/api/symfony,phpstorm,composer
