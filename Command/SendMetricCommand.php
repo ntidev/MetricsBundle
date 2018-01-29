@@ -9,13 +9,13 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class SendMetric extends Command
+class SendMetricCommand extends Command
 {
 
     protected function configure()
     {
         $this
-            ->setName('send:count')
+            ->setName('nti:metrics:count')
             ->setDescription('Send count variable to a statsD server')
             ->addArgument('variable', InputArgument::OPTIONAL, 'variable to count')
             ->addOption('host', 'H', InputOption::VALUE_OPTIONAL, 'StatsD server hostname or IP [default: localhost]')

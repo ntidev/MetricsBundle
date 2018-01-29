@@ -21,15 +21,15 @@ StatsD Client
         );
     }
 
-3. Setup the configution in the ``config.yml``
+3. Setup the configuration in the ``config.yml``
 
 ```
 # NTI Metrics
 
 nti_metrics:
     host: "statsDserver" # default: localhost
-    port: 8125         # default: 8125
-    prefix: "greenlink"  # default: ""
+    port: 8125           # default: 8125
+    prefix: "greenlink." # default: ""
 ```
 
 ### Usage
@@ -45,4 +45,10 @@ The following methods are available for send metrics:
 ```
 $collector->increment('glbs.email.send');            # Same as send "glbs.email.send:1|c"
 $collector->decrement('glbs.email.send');            # Same as send "glbs.email.send:-1|c"
+```
+
+To send the values to statsD server you have to call the following method:
+
+```
+$collector->flush();
 ```

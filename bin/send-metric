@@ -19,6 +19,6 @@ require $loader;
 
 $application = new Application('NTI Metrics', '1.0.0');
 $application->setCatchExceptions(true);
-$application->add(new NTI\MetricsBundle\Command\SendMetric());
+$application->add(new NTI\MetricsBundle\Command\SendMetricCommand());
 
 $application->run();
