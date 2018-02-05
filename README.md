@@ -25,7 +25,6 @@ StatsD Client
 
 ```yaml
 # NTI Metrics
-
 nti_metrics:
     host: "statsDserver" # default: localhost
     port: 8125           # default: 8125

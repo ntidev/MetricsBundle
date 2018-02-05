@@ -88,7 +88,15 @@ class StatsD implements Collector
             return;
         }
 
-        $fp = fsockopen('udp://'.$this->host, $this->port, $errno, $errstr, 1.0);
+        $fp= null;
+
+        try {
+            $fp = fsockopen('udp://' . $this->host, $this->port, $errno, $errstr, 1.0);
+
+        } catch (\Exception $ex){
+            error_log("Unable to open socket: udp://".$this->host.":".$this->port);
+            return;
+        }
 
         if (!$fp) {
             return;
