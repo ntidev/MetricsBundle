@@ -16,7 +16,7 @@
     ],
     "autoload" : {
         "psr-4" : {
-            "NTI\\MetricsBundle" : ""
+            "NTI\\MetricsBundle\\" : ""
         }
     },
     "minimum-stability": "dev",
