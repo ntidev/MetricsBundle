@@ -2,3 +2,7 @@ services:
     nti.metrics:
         class: NTI\MetricsBundle\Service\NTIMetrics
         arguments: ["%nti_metrics.host%", "%nti_metrics.port%", "%nti_metrics.prefix%"]
+
+    NTI\MetricsBundle\Command\:
+        resource: '../../Command/*'
+        tags: ['console.command']

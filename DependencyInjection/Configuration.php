@@ -18,8 +18,12 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('nti_metrics');
+        $treeBuilder = new TreeBuilder('nti_metrics');
+        if (method_exists($treeBuilder, 'getRootNode')) {
+            $rootNode = $treeBuilder->getRootNode();
+        } else {
+            $rootNode = $treeBuilder->root('nti_metrics');
+        }
 
         $rootNode
             ->children()
